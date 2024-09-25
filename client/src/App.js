@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Routes ,Route } from 'react-router-dom';
 
-import Landing from "./components/layout/Landing";
+import Profile from "./components/layout/Profile";
 import Login from "./components/auth/Login";
 
 import logo from './logo.svg';
@@ -11,8 +11,9 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path='/' element={<Landing/>} />
+        <Route path='/' element={<Login/>} />
         <Route path='/login' element={<Login/>} />
+        <Route path='/profile' element={<Profile/>} />
       </Routes>
     </div>
   );

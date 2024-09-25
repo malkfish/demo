@@ -4,7 +4,7 @@ class Landing extends Component {
 
   render() {
     return (
-        <div>Landing component loaded.</div>
+        <div>Profile component loaded.</div>
     );
   }
 }
