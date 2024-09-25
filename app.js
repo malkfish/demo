@@ -1,7 +1,5 @@
 const express = require('express');
 
-const port = process.env.PORT || 3000;
-
 const app = express();
 
 const CLIENT_ID = require('./private/keys').CLIENT_ID;
@@ -9,10 +7,6 @@ const CLIENT_SECRET = require('./private/keys').CLIENT_SECRET;
 const REDIRECT_URI = "http://localhost:3000/callback"
 
 global.access_token;
-
-app.get('/', function(req, res) {
-    res.send("Hello world!");
-})
 
 app.get('/login', function(req, res) {
     //var state = generateRandomString(16);
@@ -83,4 +77,5 @@ app.get('/dashboard', async function(req, res) {
     res.send("Dashboard reached.")
 })
 
+const port = process.env.PORT || 5000;
 app.listen(port, () => console.log(`Server running on port ${port}`));

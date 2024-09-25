@@ -6,9 +6,10 @@
   "scripts": {
     "start": "node app.js",
     "server": "nodemon app.js",
+    "stop": "taskkill -f -im node.exe",
     "client-install": "npm install --prefix client",
     "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "",
   "license": "MIT",
